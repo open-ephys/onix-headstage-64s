@@ -5,8 +5,8 @@
   (paper "A4" portrait)
 
   (title_block
-    (title "Headstage-RHS2116")
-    (date "2021-12-16")
+    (title "Headstage-64s")
+    (date "2022-01-21")
     (rev "A")
     (company "Open Ephys, Inc")
     (comment 1 "Jonathan P. Newman")
@@ -2450,7 +2450,7 @@
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 52.07 60.96 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 34734d9f-f767-4534-96fe-a5e616070f4d)
     (property "Reference" "TP2" (id 0) (at 53.34 58.42 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2540,10 +2540,10 @@
     (property "Reference" "J1" (id 0) (at 163.83 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Conn_Coaxial" (id 1) (at 163.83 54.61 0)
+    (property "Value" "CONMHF4-SMD-G-T" (id 1) (at 163.83 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "jonnew:LINX_CONMHF4-SMD-G" (id 2) (at 161.29 53.34 0)
+    (property "Footprint" "Headstage-64s:Coax-Adapter" (id 2) (at 161.29 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" " ~" (id 3) (at 161.29 53.34 0)
@@ -3010,6 +3010,12 @@
     (path "/54ecf674-a841-4ef7-a0a6-cf41b317ecbf"
       (reference "#PWR02") (unit 1) (value "+3.3V") (footprint "")
     )
+    (path "/ef67450c-7896-4369-9f65-a6a0bf770996/c8f58c2d-07ec-4355-92b4-a1615dc2f910"
+      (reference "#PWR03") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/ef67450c-7896-4369-9f65-a6a0bf770996/21a98fd8-a677-4041-a72a-fa16dabfe8d3"
+      (reference "#PWR04") (unit 1) (value "+1V8") (footprint "")
+    )
     (path "/f805e42a-7731-4c63-aab8-b693117b73f1/f96f902c-692c-4845-9eef-cc912aa845ab"
       (reference "#PWR017") (unit 1) (value "GND") (footprint "")
     )
@@ -3461,10 +3467,10 @@
       (reference "C50") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/111e9f78-ceab-42c3-b66c-e2ed604ec711"
-      (reference "C51") (unit 1) (value "1.0uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (reference "C51") (unit 1) (value "1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/2b42fc13-7e16-4022-9298-19773a99f7dc"
-      (reference "C52") (unit 1) (value "1.0uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (reference "C52") (unit 1) (value "1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/fcee6037-f9fd-4eff-9d73-c32d97d31ae2"
       (reference "C53") (unit 1) (value "2.2uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
@@ -3488,7 +3494,7 @@
       (reference "D1") (unit 1) (value "SFH 2400 FA") (footprint "jonnew:OSRAM_SFH2400FA-Tight")
     )
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/55545dfc-6930-4e99-9286-8901835b1e37"
-      (reference "D2") (unit 1) (value "LED") (footprint "jonnew:ROHM_SML-P11MTT86R")
+      (reference "D2") (unit 1) (value "SML-P11UTT86R") (footprint "jonnew:ROHM_SML-P11MTT86R")
     )
     (path "/ec2eb303-8bda-4887-86fa-cfe7bb147514/5e9fe99d-ee33-41ec-b2ff-8866abf981ee"
       (reference "D3") (unit 1) (value "SFH 2400 FA") (footprint "jonnew:OSRAM_SFH2400FA-Tight")
@@ -3497,13 +3503,19 @@
       (reference "F1") (unit 1) (value "0402L020SL") (footprint "jonnew:LITTLEFUSE_0402")
     )
     (path "/9086d3ed-d48c-44a7-83ea-71ce6fdb9e26"
-      (reference "J1") (unit 1) (value "Conn_Coaxial") (footprint "jonnew:LINX_CONMHF4-SMD-G")
+      (reference "J1") (unit 1) (value "CONMHF4-SMD-G-T") (footprint "Headstage-64s:Coax-Adapter")
     )
     (path "/fccc0e4f-ed50-4339-ad4b-4dd5485914e2"
       (reference "J2") (unit 1) (value "DF40C-70DP-0.4V(51)") (footprint "jonnew:HIROSE_DF40C70DP04V51")
     )
+    (path "/ef67450c-7896-4369-9f65-a6a0bf770996/d1a6949e-04d4-4c1c-b488-f7d497860452"
+      (reference "J3") (unit 1) (value "SBH11-PBPC-D05-ST-BK") (footprint "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical")
+    )
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/b1fef073-48b9-4936-be2b-7ec71e5f6dd4"
       (reference "J5") (unit 1) (value "PINHD-1x7_ONIXJTAG-RevA") (footprint "jonnew:ONIXJTAG-RevA")
+    )
+    (path "/ef67450c-7896-4369-9f65-a6a0bf770996/4a2bdb04-11f3-4675-8736-8b6d29b5959b"
+      (reference "JP1") (unit 1) (value "Jumper_2_Open") (footprint "jonnew:OE_SolderJumper-2_0201_Open_Pad")
     )
     (path "/6a107470-4fd1-4a6d-84fa-4453722c41a9/63ea2017-127c-47a0-ae03-040ce3a6283c"
       (reference "L1") (unit 1) (value "BLM15AX102SN1D") (footprint "Inductor_SMD:L_0402_1005Metric")
@@ -3557,16 +3569,16 @@
       (reference "R2") (unit 1) (value "1.2k") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/6a107470-4fd1-4a6d-84fa-4453722c41a9/a20bf941-be10-4b9f-bf67-16c9e833102b"
-      (reference "R3") (unit 1) (value "?") (footprint "Resistor_SMD:R_0201_0603Metric")
+      (reference "R3") (unit 1) (value "39.2,1%") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/6a107470-4fd1-4a6d-84fa-4453722c41a9/66966924-f4e3-42e3-b604-4f625989070c"
-      (reference "R4") (unit 1) (value "?") (footprint "Resistor_SMD:R_0201_0603Metric")
+      (reference "R4") (unit 1) (value "78.7k,1%") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/6a107470-4fd1-4a6d-84fa-4453722c41a9/8f2ed134-eb1d-4a2c-b225-1ddae1540dc0"
       (reference "R5") (unit 1) (value "?") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/6a107470-4fd1-4a6d-84fa-4453722c41a9/b7fbf054-a4bb-464c-87a8-918d57bd9d6d"
-      (reference "R6") (unit 1) (value "?") (footprint "Resistor_SMD:R_0201_0603Metric")
+      (reference "R6") (unit 1) (value "40.2k,1%") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/f805e42a-7731-4c63-aab8-b693117b73f1/9bdb9eb7-4e1a-4718-a0a3-e80ccfd63967"
       (reference "R7") (unit 1) (value "2k") (footprint "Resistor_SMD:R_0201_0603Metric")
