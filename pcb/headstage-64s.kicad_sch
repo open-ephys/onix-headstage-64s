@@ -7,7 +7,7 @@
   (title_block
     (title "Headstage-64s")
     (date "2022-01-21")
-    (rev "A")
+    (rev "B")
     (company "Open Ephys, Inc")
     (comment 1 "Jonathan P. Newman")
   )
@@ -60,7 +60,7 @@
           (stroke (width 0.2032) (type default) (color 0 0 0 0))
           (fill (type none))
         )
-        (arc (start 1.778 0) (mid 0.222 1.8083) (end -1.778 0.508)
+        (arc (start 1.778 0) (mid 0.2221 1.8083) (end -1.778 0.508)
           (stroke (width 0.254) (type default) (color 0 0 0 0))
           (fill (type none))
         )
@@ -936,6 +936,7 @@
       )
     )
   )
+
 
   (junction (at 30.48 137.16) (diameter 0) (color 0 0 0 0)
     (uuid 093c8025-b8cf-43ef-a983-0088c14fd01f)
@@ -2469,6 +2470,9 @@
     (property "Datasheet" "~" (id 3) (at 57.15 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "DNP" "DNP" (id 4) (at 52.07 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid f30250e7-c2d0-4181-9597-e3442c4bab5e))
   )
 
@@ -2494,7 +2498,7 @@
     (property "Reference" "R1" (id 0) (at 45.72 82.55 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1.2k" (id 1) (at 45.72 85.09 0)
+    (property "Value" "1k" (id 1) (at 45.72 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (id 2) (at 45.466 84.074 90)
@@ -2551,7 +2555,10 @@
     (property "Footprint" "Headstage-64s:Coax-Adapter" (id 2) (at 161.29 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" " ~" (id 3) (at 161.29 53.34 0)
+    (property "Datasheet" "~" (id 3) (at 161.29 53.34 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "DNP" "DNP" (id 4) (at 161.29 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1d2ea41a-f348-4314-9b3b-acbc80d22fd1))
@@ -2596,7 +2603,7 @@
     (property "Reference" "R2" (id 0) (at 53.34 82.55 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1.2k" (id 1) (at 53.34 85.09 0)
+    (property "Value" "1k" (id 1) (at 53.34 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (id 2) (at 53.086 84.074 90)
@@ -2671,7 +2678,7 @@
     (property "Footprint" "jonnew:HIROSE_DF40C70DP04V51" (id 2) (at 153.67 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (id 3) (at 153.67 124.46 0)
+    (property "Datasheet" "~" (id 3) (at 153.67 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid dd74b7e0-ba2c-4069-92d1-36df04034acc))
@@ -3020,6 +3027,9 @@
     )
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/21a98fd8-a677-4041-a72a-fa16dabfe8d3"
       (reference "#PWR04") (unit 1) (value "+1V8") (footprint "")
+    )
+    (path "/ef67450c-7896-4369-9f65-a6a0bf770996/819931e3-3585-408b-b9ce-37068f05fc30"
+      (reference "#PWR05") (unit 1) (value "+1V8") (footprint "")
     )
     (path "/f805e42a-7731-4c63-aab8-b693117b73f1/f96f902c-692c-4845-9eef-cc912aa845ab"
       (reference "#PWR017") (unit 1) (value "GND") (footprint "")
@@ -3495,13 +3505,13 @@
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/1a21d6d4-feeb-4daa-bdd1-facb049a5074"
       (reference "C58") (unit 1) (value "10nF") (footprint "Capacitor_SMD:C_0201_0603Metric")
     )
-    (path "/ec2eb303-8bda-4887-86fa-cfe7bb147514/8b53894d-0827-4c6c-80ee-929ae109ec5d"
+    (path "/ec2eb303-8bda-4887-86fa-cfe7bb147514/8828788e-df99-49a3-821d-754234d6a54f"
       (reference "D1") (unit 1) (value "SFH 2400 FA") (footprint "jonnew:OSRAM_SFH2400FA-Tight")
     )
     (path "/ef67450c-7896-4369-9f65-a6a0bf770996/55545dfc-6930-4e99-9286-8901835b1e37"
       (reference "D2") (unit 1) (value "SML-P11UTT86R") (footprint "jonnew:ROHM_SML-P11MTT86R")
     )
-    (path "/ec2eb303-8bda-4887-86fa-cfe7bb147514/5e9fe99d-ee33-41ec-b2ff-8866abf981ee"
+    (path "/ec2eb303-8bda-4887-86fa-cfe7bb147514/212d31ef-d376-4be8-ad3b-957dae694691"
       (reference "D3") (unit 1) (value "SFH 2400 FA") (footprint "jonnew:OSRAM_SFH2400FA-Tight")
     )
     (path "/f805e42a-7731-4c63-aab8-b693117b73f1/81b60f97-c827-4987-8ea1-71ca37114571"
@@ -3568,10 +3578,10 @@
       (reference "L16") (unit 1) (value "BLM03PX121SN1D") (footprint "Inductor_SMD:L_0201_0603Metric")
     )
     (path "/5fd7a87f-1f66-4a0e-9170-a3d4b87e664e"
-      (reference "R1") (unit 1) (value "1.2k") (footprint "Resistor_SMD:R_0201_0603Metric")
+      (reference "R1") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/ca30b210-3b4a-4e7a-930d-73fceb3e3f65"
-      (reference "R2") (unit 1) (value "1.2k") (footprint "Resistor_SMD:R_0201_0603Metric")
+      (reference "R2") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/6a107470-4fd1-4a6d-84fa-4453722c41a9/a20bf941-be10-4b9f-bf67-16c9e833102b"
       (reference "R3") (unit 1) (value "39.2,1%") (footprint "Resistor_SMD:R_0201_0603Metric")
@@ -3605,6 +3615,9 @@
     )
     (path "/eb17a8c9-ce6a-4fca-b4e2-75f5b6b1f6e7"
       (reference "R13") (unit 1) (value "0") (footprint "Resistor_SMD:R_0201_0603Metric")
+    )
+    (path "/ef67450c-7896-4369-9f65-a6a0bf770996/b4c41f79-0a04-4604-931c-c773f97e5d47"
+      (reference "R14") (unit 1) (value "4.7k") (footprint "Resistor_SMD:R_0201_0603Metric")
     )
     (path "/6a107470-4fd1-4a6d-84fa-4453722c41a9/7cee0d83-c827-4c1a-ad50-83af50d892c9"
       (reference "R15") (unit 1) (value "49.9") (footprint "Resistor_SMD:R_0201_0603Metric")
