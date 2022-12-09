@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "Headstage-64s")(type "KiCad")(uri "${KIPRJMOD}/../footprints")(options "")(descr ""))
-)
